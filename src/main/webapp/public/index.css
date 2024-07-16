@@ -1,0 +1,41 @@
+/* Edit button */
+.edit-button {
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #4299e1; /* Blue border */
+  color: #4299e1; /* Blue text color */
+  background-color: #fff; /* White background */
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #4299e1; /* Blue background on hover */
+  color: #fff; /* White text color on hover */
+}
+
+/* Delete button */
+.delete-button {
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #d03838; /* Green border */
+  color: #d03838; /* Green text color */
+  background-color: #fff; /* White background */
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #d03838; /* Green background on hover */
+  color: #fff; /* White text color on hover */
+}
+
+.active-link {
+        background-color: #4a5568; /* Adjust color as needed */
+    }
+
+    
