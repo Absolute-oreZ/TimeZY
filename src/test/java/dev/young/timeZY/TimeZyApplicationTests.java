@@ -1,4 +1,4 @@
-package io.young.timeZY;
+package dev.young.timeZY;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

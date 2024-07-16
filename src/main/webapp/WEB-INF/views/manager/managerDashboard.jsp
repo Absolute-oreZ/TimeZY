@@ -6,7 +6,7 @@
 
 <body class="bg-gray-100">
 	<div class="container mx-auto px-4 py-8">
-		<h1 class="text-3xl font-bold mb-8">Admin Dashboard</h1>
+		<h1 class="text-3xl font-bold mb-8">Manager Dashboard</h1>
 
 		<!-- Statistics Cards -->
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
