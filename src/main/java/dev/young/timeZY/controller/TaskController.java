@@ -20,40 +20,6 @@ public class TaskController {
         // List<Task> tasks = taskService.getAllTasks();
         // model.addAttribute("tasks", tasks);
         model.addAttribute("contentPage", "tasks/list.jsp");
-        return "rootLayout";
+        return "index";
     }
-
-    // @GetMapping("/create")
-    // public String showCreateForm(Model model) {
-    //     model.addAttribute("task", new Task());
-    //     model.addAttribute("contentPage", "tasks/create.jsp");
-    //     return "rootLayout";
-    // }
-
-    // @PostMapping("/create")
-    // public String createTask(@ModelAttribute Task task) {
-    //     taskService.createTask(task);
-    //     return "redirect:/tasks";
-    // }
-
-    // @GetMapping("/edit/{id}")
-    // public String showEditForm(@PathVariable Long id, Model model) {
-    //     Task task = taskService.getTaskbyId(id).orElseThrow(() -> new RuntimeException("Task not found!"));
-    //     model.addAttribute("task", task);
-    //     model.addAttribute("contentPage", "tasks/edit.jsp");
-    //     return "rootLayout";
-    // }
-
-    // @PostMapping("/edit/{id}")
-    // public String updateTask(@PathVariable Long id, @ModelAttribute Task task) {
-    //     taskService.updateTask(id, task);
-    //     return "redirect:/tasks";
-    // }
-
-    // @GetMapping("/delete/{id}")
-    // public String deleteTask(@PathVariable Long id) {
-    //     taskService.deleteTask(id);
-    //     return "redirect:/tasks";
-    // }
-
 }

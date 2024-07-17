@@ -74,7 +74,7 @@ public class AuthController {
         User currentUser = userService.getUserById(id).orElseThrow(() -> new RuntimeException("User not found!"));
         model.addAttribute("currentUser", currentUser);
         model.addAttribute("contentPage", "auth/profile.jsp");
-        return "rootLayout";
+        return "index";
     }
 
     @GetMapping("/profile/edit/{id}")
@@ -82,7 +82,7 @@ public class AuthController {
         User currentUser = userService.getUserById(id).orElseThrow(() -> new RuntimeException("User not found!"));
         model.addAttribute("currentUser", currentUser);
         model.addAttribute("contentPage", "auth/editProfile.jsp");
-        return "rootLayout";
+        return "index";
     }
 
     @PostMapping("/profile/edit/{id}")

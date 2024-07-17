@@ -51,7 +51,7 @@ public class CleanerController {
 		model.addAttribute("attendances", attendances);
 		model.addAttribute("contentPage", "cleaner/cleanerAttendance.jsp");
 
-		return "rootLayout";
+		return "index";
 	}
 
 	// Tasks
@@ -62,7 +62,7 @@ public class CleanerController {
 		System.out.println(tasks.size());
 		model.addAttribute("tasks", tasks);
 		model.addAttribute("contentPage", "shared/taskList.jsp");
-		return "rootLayout";
+		return "index";
 	}
 
 	@PostMapping("/log-in-working/{id}")
