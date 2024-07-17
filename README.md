@@ -26,6 +26,10 @@
 
 <img src="https://i.postimg.cc/FK8zz3kW/My-Attendance-Post-Login.png" alt="project-screenshot" width="1920" height="400/">
 
+<img src="https://i.postimg.cc/WzQ4GyMB/Profile.png" alt="project-screenshot" width="1920" height="400/">
+
+<img src="https://i.postimg.cc/yYZx1VKs/Edit-Profile.png" alt="project-screenshot" width="1920" height="400/">
+
   
   
 <h2>🧐 Features</h2>
