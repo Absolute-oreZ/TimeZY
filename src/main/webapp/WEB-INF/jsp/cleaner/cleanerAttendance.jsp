@@ -72,7 +72,7 @@
 		<!-- Include attendance list or other components as needed -->
 		<div>
 			<jsp:include
-				page="${pageContext.request.contextPath}/WEB-INF/views/shared/attendanceList.jsp" />
+				page="${pageContext.request.contextPath}/WEB-INF/jsp/shared/attendanceList.jsp" />
 		</div>
 	</div>
 
