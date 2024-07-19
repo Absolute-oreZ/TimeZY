@@ -8,7 +8,7 @@
 				<body class="bg-gray-100 w-full flex flex-1">
 					<div class="flex flex-1">
 						<div class="p-8 self-center w-full rounded shadow-md md:w-1/2 items-center justify-center">
-							<h1 class="text-2xl font-bold mb-6 text-center">Register New
+							<h1 class="text-2xl font-bold mb-6 text-center">Edit
 								Task</h1>
 							<div id="registerError" class="text-red-500 mb-4">
 								<% String registerError=(String) request.getAttribute("registerError"); if

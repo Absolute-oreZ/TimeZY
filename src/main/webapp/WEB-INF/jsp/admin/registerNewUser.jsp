@@ -36,13 +36,13 @@ String pwd = RandomStringUtils.random(15, characters);
 			<form action="/admin/user/new" method="post" class="space-y-4">
 				<div>
 					<label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
-					<input type="text" id="name" name="name"
+					<input type="text" id="name" name="name" required
 						placeholder="Enter name for new user"
 						class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 				</div>
 				<div>
 					<label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
-					<input type="email" id="email" name="email"
+					<input type="email" id="email" name="email" required
 						placeholder="Enter email for new user"
 						class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 				</div>
@@ -60,7 +60,7 @@ String pwd = RandomStringUtils.random(15, characters);
 				</div>
 				<div>
 					<label for="phone" class="block text-sm font-medium text-gray-700">Phone:</label>
-					<input type="text" id="phone" name="phone"
+					<input type="text" id="phone" name="phone" required	
 						placeholder="Enter phone number"
 						class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 				</div>

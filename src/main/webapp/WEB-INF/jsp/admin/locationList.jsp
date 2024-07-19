@@ -7,6 +7,13 @@
 <head>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/public/index.css" />
+<script>
+	function confirmDelete(locationId) {
+		if (confirm("Are you sure you want to delete this location?")) {
+			window.location.href = "/admin/location/delete/" + locationId;
+		}
+	}
+</script>
 </head>
 
 <body class="bg-gray-100">
@@ -41,11 +48,13 @@
 							<td class="px-4 py-2">${location.locationName}</td>
 							<td class="px-4 py-2">${location.buildingName}</td>
 							<td class="px-4 py-2">${location.floorNumber}</td>
-							<td class="px-4 py-2"><a
-								href="/admin/location/edit/${location.locationId}"
-								class="edit-button text-blue-600">Edit</a> | <a
-								href="/admin/location/delete/${location.locationId}"
-								class="delete-button text-red-600">Delete</a></td>
+							<td class="px-4 py-2">
+								<a href="/admin/location/edit/${location.locationId}"
+									class="edit-button text-blue-600">Edit</a> | 
+								<a href="javascript:void(0);"
+									onclick="confirmDelete('${location.locationId}')"
+									class="delete-button text-red-600">Delete</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>

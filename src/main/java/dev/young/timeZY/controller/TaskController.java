@@ -20,6 +20,6 @@ public class TaskController {
         // List<Task> tasks = taskService.getAllTasks();
         // model.addAttribute("tasks", tasks);
         model.addAttribute("contentPage", "tasks/list.jsp");
-        return "index";
+        return "rootLayout";
     }
 }

@@ -67,7 +67,7 @@ public class ManagerController {
 				model.addAttribute("recentAttendance", recentAttendance);
 
 				model.addAttribute("contentPage", "manager/managerDashboard.jsp");
-				return "index";
+				return "rootLayout";
 	}
 
 	// User
@@ -76,7 +76,7 @@ public class ManagerController {
 		List<User> cleaners = userService.getAllUsersByRole(UserRole.CLEANER);
 		model.addAttribute("cleaners", cleaners);
 		model.addAttribute("contentPage", "shared/userList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	// Attendance
@@ -85,7 +85,7 @@ public class ManagerController {
 		List<Attendance> attendances = attendanceService.getAllAttendanceSortedByDateDescending();
 		model.addAttribute("attendances", attendances);
 		model.addAttribute("contentPage", "shared/attendanceList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/attendance/{id}/note")
@@ -110,7 +110,7 @@ public class ManagerController {
 		}
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "manager/editUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	// Tasks
@@ -120,7 +120,7 @@ public class ManagerController {
 		List<Task> tasks = taskService.getAllTasksByManager(currentManager);
 		model.addAttribute("tasks", tasks);
 		model.addAttribute("contentPage", "shared/taskList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/new")
@@ -133,7 +133,7 @@ public class ManagerController {
 		model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 		model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 		model.addAttribute("contentPage", "shared/registerNewTask.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/edit/{id}")
@@ -148,7 +148,7 @@ public class ManagerController {
 		model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 		model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 		model.addAttribute("contentPage", "shared/editTask.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/delete/{id}")
@@ -212,7 +212,7 @@ public class ManagerController {
 			model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 			model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 			model.addAttribute("contentPage", "shared/registerNewTask.jsp");
-			return "index";
+			return "rootLayout";
 		}
 	}
 
@@ -260,7 +260,7 @@ public class ManagerController {
 			model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 			model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 			model.addAttribute("contentPage", "shared/editTask.jsp");
-			return "index";
+			return "rootLayout";
 		}
 	}
 

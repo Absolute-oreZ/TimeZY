@@ -19,7 +19,8 @@
                                     <% String editingError=(String) request.getAttribute("editingError"); if
                                         (editingError !=null) { out.print(editingError); } %>
                                 </div>
-                                <form action="/profile/edit/${currentUser.userId}" method="POST" onsubmit="return validateForm()">
+                                <form action="/profile/edit/${currentUser.userId}" method="POST"
+                                    onsubmit="return validateForm()">
                                     <div class="mb-6">
                                         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                                         <input type="text" id="name" name="name" value="${currentUser.name}"
@@ -37,11 +38,17 @@
                                         <input type="text" id="phone" name="phone" value="${currentUser.phone}"
                                             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                     </div>
-                                    <div class="mb-6">
+                                    <div class="mb-6 relative">
                                         <label for="password"
                                             class="block text-sm font-medium text-gray-700">Password</label>
                                         <input type="password" id="password" name="password" placeholder="********"
                                             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                        <span class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                            <button type="button" id="togglePassword"
+                                                class="text-gray-400 hover:text-gray-600">
+                                                <i class="far fa-eye-slash"></i>
+                                            </button>
+                                        </span>
                                         <p class="mt-2 text-sm text-gray-500">Leave blank to keep current password.</p>
                                     </div>
                                     <div class="flex justify-end">
@@ -58,16 +65,35 @@
                 <script>
                     function validateForm() {
                         var password = document.getElementById("password").value;
-                
+
                         if (password !== "" && (password.length < 8 || password.length > 20)) {
                             alert("Password must be between 8 to 20 characters.");
                             return false;
                         }
-                
+
                         return true;
                     }
                 </script>
-                
+
+                <script>
+                    function showPass() {
+                        var passwordField = document.getElementById("password");
+                        var toggleBtn = document.getElementById("togglePassword");
+
+                        if (passwordField.type === "password") {
+                            passwordField.type = "text";
+                            toggleBtn.innerHTML = '<i class="far fa-eye"></i>';
+                        } else {
+                            passwordField.type = "password";
+                            toggleBtn.innerHTML = '<i class="far fa-eye-slash"></i>';
+                        }
+                    }
+
+                    // Attach click event listener to the togglePassword button
+                    document.getElementById("togglePassword").addEventListener("click",
+                        showPass);
+                </script>
+
             </body>
 
             </html>

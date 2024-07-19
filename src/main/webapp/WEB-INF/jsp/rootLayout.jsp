@@ -44,11 +44,7 @@
 		</div>
 
 		<!-- Bottom Bar (shown on mobile) -->
-		<footer
-			class="lg:hidden fixed inset-x-0 bottom-0 w-full bg-white border-t border-gray-300 h-16 flex items-center justify-center">
-			<span class="text-gray-600">Bottom Bar Content</span>
-		</footer>
-
+		<jsp:include page="components/bottomBar.jsp" />
 	</div>
 
 </body>

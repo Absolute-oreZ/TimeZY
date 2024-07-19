@@ -92,7 +92,7 @@ th, td {
 							<td class="px-2 px-1 text-sm md:text-base"><fmt:formatDate
 									value="${task.taskDeadline}" pattern="dd/MM/yy" /></td>
 							<td class="px-2 px-1 text-sm md:text-base">${task.taskName}</td>
-							<td class="px-2 px-1 text-sm md:text-base">${task.taskCategory}</td>
+							<td class="px-2 px-1 text-sm md:text-base">${task.taskCategory.toString()}</td>
 							<td class="px-2 px-1 text-sm md:text-base">${task.taskDescription}</td>
 							<td class="px-2 px-1 text-sm md:text-base">${task.taskPriority.toString()}</td>
 							<td class="px-2 px-1 text-sm md:text-base"><span

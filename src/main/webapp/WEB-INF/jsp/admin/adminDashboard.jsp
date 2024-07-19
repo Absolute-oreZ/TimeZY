@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,7 @@
 					<span>Attendance Rate</span> <i
 						class="fas fa-chart-line text-purple-600"></i>
 				</h2>
-				<p class="text-3xl font-bold text-purple-600">${attendanceRate}%</p>
+				<p class="text-3xl font-bold text-purple-600"><fmt:formatNumber value="${attendanceRate/100}" type="percent" /></p>
 			</div>
 		</div>
 
@@ -58,7 +59,8 @@
 								class="bg-gradient-to-r from-blue-600 to-blue-400 h-2.5 rounded-full"
 								style="width: ${taskCreatedPercentage}%"></div>
 						</div>
-						<span class="text-sm font-medium">${taskCreatedPercentage}%</span>
+						<span class="text-sm font-medium"><fmt:formatNumber value="${taskCreatedPercentage / 100}" type="percent" />
+						</span>
 					</div>
 				</div>
 
@@ -74,7 +76,8 @@
 								class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-2.5 rounded-full"
 								style="width: ${taskInProgressPercentage}%"></div>
 						</div>
-						<span class="text-sm font-medium">${taskInProgressPercentage}%</span>
+						<span class="text-sm font-medium"><fmt:formatNumber value="${taskInProgressPercentage / 100}" type="percent" />
+						</span>
 					</div>
 				</div>
 
@@ -91,7 +94,8 @@
 								class="bg-gradient-to-r from-green-600 to-green-400 h-2.5 rounded-full"
 								style="width: ${taskCompletedPercentage}%"></div>
 						</div>
-						<span class="text-sm font-medium">${taskCompletedPercentage}%</span>
+						<span class="text-sm font-medium"><fmt:formatNumber value="${taskCompletedPercentage / 100}" type="percent" />
+						</span>
 					</div>
 				</div>
 
@@ -108,7 +112,8 @@
 								class="bg-gradient-to-r from-red-600 to-red-400 h-2.5 rounded-full"
 								style="width: ${taskOverduePercentage}%"></div>
 						</div>
-						<span class="text-sm font-medium">${taskOverduePercentage}%</span>
+						<span class="text-sm font-medium"><fmt:formatNumber value="${taskOverduePercentage / 100}" type="percent" />
+						</span>
 					</div>
 				</div>
 			</div>

@@ -70,7 +70,7 @@ public class AdminController {
 		model.addAttribute("recentAttendance", recentAttendance);
 
 		model.addAttribute("contentPage", "admin/adminDashboard.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	// User
@@ -82,7 +82,7 @@ public class AdminController {
 				.collect(Collectors.toList());
 		model.addAttribute("cleanersAndManagers", cleanersAndManagers);
 		model.addAttribute("contentPage", "shared/userList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/user/new")
@@ -90,7 +90,7 @@ public class AdminController {
 		model.addAttribute("user", new User());
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "admin/registerNewUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/user/edit/{id}")
@@ -99,7 +99,7 @@ public class AdminController {
 		model.addAttribute("user", user);
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "admin/editUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/user/delete/{id}")
@@ -122,7 +122,7 @@ public class AdminController {
 	@GetMapping("/profile/{id}")
 	public String showProfile(@PathVariable Long id, Model model) {
 		model.addAttribute("pageContent", "shared/profile.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	// Attendance
@@ -131,7 +131,7 @@ public class AdminController {
 		List<Attendance> attendances = attendanceService.getAllAttendanceSortedByDateDescending();
 		model.addAttribute("attendances", attendances);
 		model.addAttribute("contentPage", "shared/attendanceList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/cleaners/attendance/{id}/note")
@@ -156,7 +156,7 @@ public class AdminController {
 		}
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "admin/editUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	// Location
@@ -165,14 +165,14 @@ public class AdminController {
 		List<Location> locations = locationService.getAllLocation();
 		model.addAttribute("locations", locations);
 		model.addAttribute("contentPage", "admin/locationList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/location/new")
 	public String showCreateLocationForm(Model model) {
 		model.addAttribute("location", new Location());
 		model.addAttribute("contentPage", "admin/registerNewLocation.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/location/edit/{id}")
@@ -181,7 +181,7 @@ public class AdminController {
 				.orElseThrow(() -> new RuntimeException("Location not found!"));
 		model.addAttribute("location", location);
 		model.addAttribute("contentPage", "admin/editLocation.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/location/delete/{id}")
@@ -208,7 +208,7 @@ public class AdminController {
 		List<Task> tasks = taskService.getAllTask();
 		model.addAttribute("tasks", tasks);
 		model.addAttribute("contentPage", "shared/taskList.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/new")
@@ -221,7 +221,7 @@ public class AdminController {
 		model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 		model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 		model.addAttribute("contentPage", "shared/registerNewTask.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/edit/{id}")
@@ -236,7 +236,7 @@ public class AdminController {
 		model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 		model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 		model.addAttribute("contentPage", "shared/editTask.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@GetMapping("/task/delete/{id}")
@@ -283,7 +283,7 @@ public class AdminController {
 		model.addAttribute("user", user);
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "admin/registerNewUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@PostMapping("/location/new")
@@ -299,7 +299,7 @@ public class AdminController {
 			model.addAttribute("registerError", "Unknown error occurred. Please try again.");
 		}
 		model.addAttribute("contentPage", "admin/registerNewUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@PostMapping("/user/edit/{id}")
@@ -321,7 +321,7 @@ public class AdminController {
 		model.addAttribute("user", user);
 		model.addAttribute("userRoles", Arrays.asList(UserRole.values()));
 		model.addAttribute("contentPage", "admin/editUser.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@PostMapping("/location/edit/{id}")
@@ -340,7 +340,7 @@ public class AdminController {
 
 		model.addAttribute("location", location);
 		model.addAttribute("contentPage", "admin/editLocation.jsp");
-		return "index";
+		return "rootLayout";
 	}
 
 	@PostMapping("/task/new")
@@ -386,7 +386,7 @@ public class AdminController {
 			model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 			model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 			model.addAttribute("contentPage", "shared/registerNewTask.jsp");
-			return "index";
+			return "rootLayout";
 		}
 	}
 
@@ -433,7 +433,7 @@ public class AdminController {
 			model.addAttribute("taskCategory", Arrays.asList(TaskCategory.values()));
 			model.addAttribute("taskPriority", Arrays.asList(TaskPriority.values()));
 			model.addAttribute("contentPage", "shared/editTask.jsp");
-			return "index";
+			return "rootLayout";
 		}
 	}
 
