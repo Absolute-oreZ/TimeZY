@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/Absolute-oreZ/TimeZY/image?language=1&amp;logo=https%3A%2F%2Fi.postimg.cc%2F43wscZ9K%2Flogo.png&amp;name=1&amp;owner=1&amp;pattern=Charlie%20Brown&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">"Stay on top of tasks and boost productivity effortlessly with TimeZY - your ultimate solution for streamlined employee task tracking and seamless deadline management."</p>
+<p id="description" align="center">"Stay on top of tasks and boost productivity effortlessly with TimeZY - your ultimate solution for streamlined employee task tracking and seamless deadline management."</p>
 
 <h2>Project Screenshots:</h2>
 
@@ -53,7 +53,7 @@ Make sure you have the following installed on your machine:
 *   Java Development Kit (JDK)
 *   Maven
 *   MySQL Server
-*   Preferred MySQL Server Client
+*   Preferred MySQL Client
 *   Git
 
 <p>1. Set up a local database by using a MySQL client with following queries:</p>
